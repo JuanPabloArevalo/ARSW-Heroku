@@ -14,7 +14,7 @@ import java.util.logging.Logger;
  * @author 2087559
  */
 public class ServidorWeb {
-    public static void main(String[] args){
+    public ServidorWeb(){
         try {
             ServerSocket serverSocket = null;
             Socket clientSocket = null;
