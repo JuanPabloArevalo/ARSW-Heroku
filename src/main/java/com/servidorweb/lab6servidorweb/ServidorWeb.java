@@ -21,7 +21,7 @@ public class ServidorWeb {
         boolean fin = false;    
         
         try {
-            serverSocket = new ServerSocket(new Integer(System.getenv("PORT")));
+            serverSocket = new ServerSocket(35000);
         } catch (IOException e) {
             System.err.println("Could not listen on port: 35000.");
             System.exit(1);
