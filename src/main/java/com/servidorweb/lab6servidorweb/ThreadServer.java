@@ -20,27 +20,18 @@ import java.util.logging.Logger;
  * @author aypc
  */
 public class ThreadServer implements Runnable {
-    private  ServerSocket serverSocket = null;
+    private  Socket clientSocket = null;
     
-    public ThreadServer(ServerSocket ss){
-        serverSocket = ss;
+    public ThreadServer(Socket clientSocket){
+        this.clientSocket = clientSocket;
     }
             
             
     @Override
     public void run() {
         try {
-            Socket clientSocket = null;
             PrintWriter out = null;
             BufferedReader in  = null;
-            clientSocket = null;
-            try {
-                System.out.println("Listo para recibir ...");
-                clientSocket = serverSocket.accept();
-            } catch (IOException e) {
-                System.err.println("Accept failed.");
-                System.exit(1);
-            }
             
             out = new PrintWriter(clientSocket.getOutputStream(), true);
             in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
@@ -68,10 +59,15 @@ public class ThreadServer implements Runnable {
                     break;
                 }
             }
-            
             out.close();
             in.close();
             clientSocket.close();
+            
+            try {
+                Thread.sleep(10000);
+            } catch (InterruptedException ex) {
+                Logger.getLogger(ThreadServer.class.getName()).log(Level.SEVERE, null, ex);
+            }
         } catch (IOException ex) {
             Logger.getLogger(ThreadServer.class.getName()).log(Level.SEVERE, null, ex);
         }
