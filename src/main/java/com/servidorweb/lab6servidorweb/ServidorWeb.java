@@ -23,10 +23,10 @@ public class ServidorWeb {
         try {
             serverSocket = new ServerSocket(new Integer(System.getenv("PORT")));
         } catch (IOException e) {
-            System.err.println("Could not listen on port: 35000.");
+            System.err.println("Could not listen on port.");
             System.exit(1);
         }
-        ExecutorService exec = Executors.newFixedThreadPool(2);
+        ExecutorService exec = Executors.newFixedThreadPool(8);
         while(true || !fin) {
             try {
                 System.out.println("Listo para recibir ...");
