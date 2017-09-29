@@ -62,12 +62,6 @@ public class ThreadServer implements Runnable {
             out.close();
             in.close();
             clientSocket.close();
-            
-            try {
-                Thread.sleep(10000);
-            } catch (InterruptedException ex) {
-                Logger.getLogger(ThreadServer.class.getName()).log(Level.SEVERE, null, ex);
-            }
         } catch (IOException ex) {
             Logger.getLogger(ThreadServer.class.getName()).log(Level.SEVERE, null, ex);
         }

@@ -9,7 +9,7 @@ package com.servidorweb.lab6servidorweb;
  *
  * @author aypc
  */
-public class mainServidorWeb {
+public class Main {
     public static void main(String[] args){
         ServidorWeb servidorWeb = new ServidorWeb();
     }
