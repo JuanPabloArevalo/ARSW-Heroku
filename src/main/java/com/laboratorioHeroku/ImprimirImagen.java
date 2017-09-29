@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.servidorweb.lab6servidorweb;
+package com.laboratorioHeroku;
 
 import java.io.BufferedOutputStream;
 import java.io.File;
