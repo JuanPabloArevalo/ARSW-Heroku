@@ -20,7 +20,7 @@ public class ImprimirHtml {
     public static void imprimirHtml(String sfichero, PrintWriter out){
 	// comprobamos si tiene una barra al principio
 	if (sfichero.startsWith("/")){
-		sfichero = sfichero.substring(1) ;
+		sfichero = "./"+sfichero.substring(1) ;
 	}
 
         try{

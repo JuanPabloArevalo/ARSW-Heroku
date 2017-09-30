@@ -19,6 +19,7 @@ public class ServidorWeb {
             File miDir = new File (".");
             try {
               System.out.println ("Directorio actual: " + miDir.getCanonicalPath());
+              
               }
             catch(Exception e) {
               e.printStackTrace();
