@@ -40,7 +40,8 @@
                 <configuration>
                         <archive>
                                 <manifest>
-                                        <mainClass>com.laboratorioHeroku.Main</mainClass>
+                                        <addClasspath>true</addClasspath>
+                                        <mainClass>com.laboratorioHeroku.Main.main</mainClass>
                                 </manifest>
                         </archive>
                 </configuration>
