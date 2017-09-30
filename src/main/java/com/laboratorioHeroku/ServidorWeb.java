@@ -16,6 +16,14 @@ import java.util.logging.Logger;
  */
 public class ServidorWeb {
     public ServidorWeb(){
+            File miDir = new File (".");
+            try {
+              System.out.println ("Directorio actual: " + miDir.getCanonicalPath());
+              }
+            catch(Exception e) {
+              e.printStackTrace();
+              }
+            
         ServerSocket serverSocket = null;
         Socket clientSocket = null;
         boolean fin = false;    
