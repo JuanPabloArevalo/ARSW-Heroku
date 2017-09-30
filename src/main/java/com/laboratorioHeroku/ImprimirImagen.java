@@ -19,6 +19,10 @@ import java.net.Socket;
  */
 public class ImprimirImagen {
     public static void imprimirImagen(String sfichero, Socket clientSocket, String inputLine) throws IOException{
+        if (sfichero.startsWith("/")){
+            sfichero = "./"+sfichero.substring(1) ;
+	}
+                
         try{
             // Ahora leemos el fichero y lo retornamos
 	    File mifichero = new File(sfichero) ;
